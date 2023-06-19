@@ -4,52 +4,37 @@
         <div class="col-md-4 mx-auto">
             <h4 class="text-center">Actualizar Información</h4>
             <form (ngSubmit)="onUpdate()" novalidate #f="ngForm">
-
                 <div class="mb-3">
-                    <input type="text" class="form-control" id="fechaIngreso" name="fechaIngreso" placeholder="Fecha de Ingreso"
+                    <input type="text" class="form-control" id="name" name="name" placeholder="Fecha de ingresos"
                         autocomplete="off" required [(ngModel)]="mascota.fechaIngreso">
                 </div>
-
-                <div class="form-group">
-                    <input type="text" class="form-control" id="nombreMascota" name="nombreMascota"
-                        placeholder="Nombre de Mascota" autocomplete="off" required [(ngModel)]="mascota.nombreMascota">
+                <div class="mb-3">
+                    <input type="text" class="form-control" id="price" name="price" placeholder="Nombre de mascota"
+                        autocomplete="off" required [(ngModel)]="mascota.nombreMascota">
                 </div>
-
-                <div class="form-group">
-                    <input type="text" class="form-control" id="propietario" name="propietario"
-                        placeholder="Propietario" autocomplete="off" required [(ngModel)]="mascota.propietario">
+                <div class="mb-3">
+                    <input type="text" class="form-control" id="propietario" name="propietario" placeholder="Propietario"
+                        autocomplete="off" required [(ngModel)]="mascota.propietario">
                 </div>
-
-                <div class="form-group">
-                    <input type="text" class="form-control" id="dui" name="dui"
-                        placeholder="Dui" autocomplete="off" required [(ngModel)]="mascota.dui">
+                <div class="mb-3">
+                    <input type="text" class="form-control" id="dui" name="dui" placeholder="Dui"
+                        autocomplete="off" required [(ngModel)]="mascota.dui">
                 </div>
-
-
-                <div class="form-group">
-                    <input type="text" class="form-control" id="dui" name="direccion"
-                        placeholder="Direccion" autocomplete="off" required [(ngModel)]="mascota.direccion">
+                <div class="mb-3">
+                    <input type="text" class="form-control" id="direccion" name="direccion" placeholder="direccion"
+                        autocomplete="off" required [(ngModel)]="mascota.direccion">
                 </div>
-
-                <div class="form-group">
-                    <input type="text" class="form-control" id="dui" name="direccion"
-                        placeholder="Direccion" autocomplete="off" required [(ngModel)]="mascota.direccion">
+                <div class="mb-3">
+                    <input type="text" class="form-control" id="descripcionOperacion" name="descripcionOperacion" placeholder="Descripcion de Operacion"
+                        autocomplete="off" required [(ngModel)]="mascota.descripcionOperacion">
                 </div>
-
-                <div class="form-group">
-                    <input type="text" class="form-control" id="dui" name="descripcionOperacion"
-                        placeholder="Descripcion de Operacion" autocomplete="off" required [(ngModel)]="mascota.descripcionOperacion">
+                <div class="mb-3">
+                    <input type="text" class="form-control" id="tiempoEsperado" name="tiempoEsperado" placeholder="Tiempo Esperado"
+                        autocomplete="off" required [(ngModel)]="mascota.tiempoEsperado">
                 </div>
-
-                <div class="form-group">
-                    <input type="text" class="form-control" id="dui" name="tiempoEsperado"
-                        placeholder="Tiempo Esperado" autocomplete="off" required [(ngModel)]="mascota.descripcionOperacion">
-                </div>
-
-
-                <button  class="btn btn-outline-success w-100 mb-3" [disabled]="!f.valid">
-                     <i class="far fa-edit"></i> Actualizar
-                    </button>
+                <button class="btn btn-outline-success w-100 mb-3" [disabled]="!f.valid">
+                        <i class="far fa-edit"></i> Actualizar
+                </button>
                 <button class="btn btn-outline-primary w-100" routerLink="/">
                     <i class="fas fa-arrow-alt-circle-left"></i> Regresar
                 </button>
