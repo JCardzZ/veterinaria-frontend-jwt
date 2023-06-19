@@ -1,0 +1,47 @@
+<app-menu></app-menu>
+<div class="container">
+    <table class="table table-dark table-hover text-center">
+        <thead>
+            <tr>
+                <th scope="col">ID</th>
+                <th scope="col">Fecha de Ingreso</th>
+                <th scope="col">Nombre de Mascota</th>
+                <th scope="col">Propietario</th>
+                <th scope="col">Dui</th>
+                <th scope="col">Dirección</th>
+                <th scope="col">Descripcion de Operacion</th>
+                <th scope="col">Tiempo Esperado</th>
+                <th scope="col">View</th>
+                <th scope="col" *ngIf="isAdmin">Edit</th>
+                <th scope="col"  *ngIf="isAdmin">Delete</th>
+
+
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let pet of mascotas">
+                <td>{{pet.id}}</td>
+                <td>{{pet.fechaIngreso}}</td>
+                <td>{{pet.nombreMascota}}</td>
+                <td>{{pet.propietario}}</td>
+                <td>{{pet.dui}}</td>
+                <td>{{pet.direccion}}</td>
+                <td>{{pet.descripcionOperacion}}</td>
+                <td>{{pet.tiempoEsperado}}</td>
+
+
+                <td><button class="btn btn-outline-primary" routerLink="/detail/{{pet.id}}"><i class="far fa-eye">
+                            View</i></button></td>
+                <td *ngIf="isAdmin"><button class="btn btn-outline-warning" (click)="sendProduct(pet)"><i class="far fa-edit">
+                            Edit</i></button></td>
+                <td  *ngIf="isAdmin"><button class="btn btn-outline-danger" (click)="onDelete(pet.id)"><i class="far fa-trash-alt">
+                            Delete</i></button></td>
+            </tr>
+        </tbody>
+    </table>
+    <div class="mt-3"  *ngIf="isAdmin">
+        <button class="btn btn-outline-success btn-lg" routerLink="/create">
+            <i class="fas fa-plus-circle"></i> Registrar Mascota
+        </button>
+    </div>
+</div>

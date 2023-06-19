@@ -1,0 +1,33 @@
+<app-menu></app-menu>
+
+<div class="container" *ngIf="pets">
+    <div class="row mt-5">
+        <div class="col-md-4 mx-auto">
+            <div class="card">
+                <div class="card-header text-center">
+                    Información de Mascota
+                </div>
+                <div class="card-body">
+                    <ul class="list-group list-group-flush">
+                        <li class="list-group-item"><b>ID: </b>{{pets.id}}</li>
+                        <li class="list-group-item"><b>fecha de Ingreso: </b>{{pets.fechaIngreso}}</li>
+                        <li class="list-group-item"><b>Nombre de Mascota: </b>{{pets.nombreMascota}}</li>
+                        <li class="list-group-item"><b>Propietario: </b>{{pets.propietario}}</li>
+                        <li class="list-group-item"><b>Dui: </b>{{pets.dui}}</li>
+                        <li class="list-group-item"><b>Dirección: </b>{{pets.direccion}}</li>
+                        <li class="list-group-item"><b>Descripción de Operación: </b>{{pets.descripcionOperacion}}</li>
+                        <li class="list-group-item"><b>Tiempo de Espera: </b>{{pets.tiempoEsperado}}</li>
+
+                    </ul>
+                </div>
+                <div class="card-footer">
+                    <button class="btn btn-ouline-primary w-100" routerLink="/">
+                        <i class="fas fa-arrow-alt-circle-left"></i> Regresar
+                    </button>
+                </div>
+            </div>
+           
+        </div>
+    </div>
+  
+</div>
